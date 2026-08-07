@@ -1,0 +1,102 @@
+# ==========================================
+# SECCIÓN 1: ESPECÍFICO DE PYTHON
+# ==========================================
+# Entornos virtuales (Virtual Environments)
+venv/
+.venv/
+env/
+.env/
+ENV/
+bin/
+lib/
+develop-eggs/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Caché de código y bytecode compilado
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Herramientas de pruebas y cobertura (Pytest, Tox)
+htmlcov/
+.toml
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# ==========================================
+# SECCIÓN 2: ESPECÍFICO DE FLUTTER Y DART
+# ==========================================
+# Archivos de Flutter y Dart generados por la herramienta
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Archivos de configuración que cambian según la máquina
+/android/local.properties
+/android/key.properties
+/ios/.xcode/
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/ephemeral/
+/linux/flutter/ephemeral/
+/macos/flutter/ephemeral/
+/windows/flutter/ephemeral/
+
+# Archivos web compilados
+/web/flutter_bootstrap.js
+
+# Estructuras de dependencias de CocoaPods (iOS/macOS)
+.symlinks/
+Pods/
+/ios/Podfile.lock
+/macos/Podfile.lock
+
+# Símbolos de depuración y logs de fallos
+*.log
+*.crash
+*.symbol
+
+# Opcional: Descomenta si usas generadores de código y no deseas trackearlos
+# *.g.dart
+# *.freezed.dart
+
+# ==========================================
+# SECCIÓN 3: EDITORES DE CÓDIGO E IDEs
+# ==========================================
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
