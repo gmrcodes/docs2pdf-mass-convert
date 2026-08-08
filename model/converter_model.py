@@ -1,7 +1,18 @@
 import os
 import threading
-from docx2pdf import convert
+import platform
+import subprocess
 
+
+# Se importa docx2pdf si no es linux
+
+SYSTEM_OS = platform.system()
+
+if SYSTEM_OS != "Linux":
+    try:
+        from docx2pdf import convert
+    except ImportError:
+        pass
 
 class ConverterModel:
     def __init__(self):
@@ -29,6 +40,7 @@ class ConverterModel:
                     complete_cb(0)
                     return
 
+                log_cb(f"🖥️ Sistema detectado: {SYSTEM_OS}")
                 log_cb(f"📋 Se encontraron {total_archivos} archivo(s) para procesar.")
 
                 for i, archivo in enumerate(archivos, start=1):
@@ -37,7 +49,25 @@ class ConverterModel:
                     ruta_pdf = os.path.normpath(os.path.join(destino, f"{nombre_base}.pdf"))
 
                     log_cb(f"[{i}/{total_archivos}] Convirtiendo: {archivo}...")
-                    convert(ruta_doc, ruta_pdf)
+
+                    if SYSTEM_OS=="Linux":
+                        comando=[
+                            'soffice',
+                            '--headless',
+                            '--convert-to','pdf',
+                            '--outdir', destino,
+                            ruta_doc
+                        ]
+                        resultado = subprocess.run(
+                            comando,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            text=True
+                        )
+                        if resultado.returncode != 0:
+                            raise Exception(f"Error en Libreoffice: {resultado.stderr}")
+                    else:
+                        convert(ruta_doc, ruta_pdf)
 
                     progreso = i / total_archivos
                     progress_cb(progreso)
