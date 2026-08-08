@@ -4,11 +4,13 @@ from tkinter import filedialog, messagebox
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
+APP_VERSION='0.2.0'
 
 class MainView(ctk.CTk):
     def __init__(self):
         super().__init__()
 
+        self.version = APP_VERSION
         self.title("Convertidor Masivo de Word a PDF")
         self.geometry("640x480")
         self.resizable(False, False)
@@ -80,6 +82,15 @@ class MainView(ctk.CTk):
         # --- Caja de Logs ---
         self.txt_log = ctk.CTkTextbox(self, height=120, state="disabled")
         self.txt_log.pack(padx=20, pady=(0, 20), fill="both", expand=True)
+
+        # --- Footer: Etiqueta de versión ---
+        self.lbl_version = ctk.CTkLabel(
+            self, 
+            text=f"Versión {self.version}", 
+            font=ctk.CTkFont(size=11), 
+            text_color="gray"
+        )
+        self.lbl_version.pack(side="bottom", anchor="e", padx=20, pady=(0, 10))
 
     # --- API pública de la vista para el controlador ---
     def set_input_path_text(self, text: str, active: bool = True):
