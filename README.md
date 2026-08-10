@@ -11,9 +11,13 @@ Aplicación de escritorio moderna y multiplataforma diseñada para convertir lot
 
 ## 📸 Capturas de Pantalla
 
-|                                        Modo Claro                                         |                                         Modo Oscuro                                         |
-| :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-| ![Modo Claro Placeholder](https://via.placeholder.com/500x350?text=Screenshot+Modo+Claro) | ![Modo Oscuro Placeholder](https://via.placeholder.com/500x350?text=Screenshot+Modo+Oscuro) |
+|                           Modo Claro                           |                           Modo Oscuro                            |
+| :------------------------------------------------------------: | :--------------------------------------------------------------: |
+| <img src="media/modo claro.png" width="400" alt="Modo claro"/> | <img src="media/modo oscuro.png" width="400" alt="Modo oscuro"/> |
+
+|                                log                                 |                                Finalizada                                |
+| :----------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| <img src="media/log convertion.png" width="400" alt="Modo claro"/> | <img src="media/convertion finished.png" width="400" alt="Modo oscuro"/> |
 
 ---
 
@@ -69,6 +73,7 @@ WORD2PDF-MASS-CONVERT/
 ├── view/
 │   ├── __init__.py
 │   └── main_view.py            # Componentes gráficos y maquetación (CustomTkinter)
+├── media/                      # Screenshots de la UI
 ├── .gitignore                  # Archivos ignorados por Git
 ├── LICENSE                     # Licencia del proyecto (GPLv3)
 ├── main.py                     # Punto de entrada principal
@@ -80,35 +85,36 @@ WORD2PDF-MASS-CONVERT/
 
 ### 1. Clonar el repositorio:
 
-    ```Bash
+```bash
 
-    git clone [https://github.com/gmrcodes/word2pdf-mass-convert.git](https://github.com/gmrcodes/word2pdf-mass-convert.git)
-    cd word2pdf-masivo
-    ```
+git clone [https://github.com/gmrcodes/word2pdf-mass-convert.git](https://github.com/gmrcodes/word2pdf-mass-convert.git)
+cd word2pdf-masivo
+
+```
 
 ### 2. Crear y activar el entorno virtual (opcional):
 
 #### Linux / macOS:
 
-    ```Bash
+```bash
 
-        python3 -m venv .venv
-        source .venv/bin/activate
-    ```
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
 ### 3. Instalar dependencias:
 
-    ```Bash
+```bash
 
-    pip install -r requirements.txt
-    ```
+pip install -r requirements.txt
+```
 
 ### Ejecutar la aplicación:
 
-    ```Bash
+```bash
 
-    python main.py
-    ```
+python main.py
+```
 
 ## 📜 Licencia
 
