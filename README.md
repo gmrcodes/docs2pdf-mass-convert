@@ -88,7 +88,7 @@ DOCS2PDF-MASS-CONVERT/
 ```bash
 
 git clone https://github.com/gmrcodes/docs2pdf-mass-convert.git
-cd word2pdf-masivo
+cd docs2pdf-mass-convert
 
 ```
 
