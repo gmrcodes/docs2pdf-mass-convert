@@ -63,7 +63,7 @@ Aplicación de escritorio moderna y multiplataforma diseñada para convertir lot
 El proyecto sigue una arquitectura **MVC** organizada en carpetas independientes:
 
 ```text
-WORD2PDF-MASS-CONVERT/
+DOCS2PDF-MASS-CONVERT/
 ├── controller/
 │   ├── __init__.py
 │   └── converter_controller.py # Escucha eventos de la vista y coordina el modelo
@@ -87,7 +87,7 @@ WORD2PDF-MASS-CONVERT/
 
 ```bash
 
-git clone [https://github.com/gmrcodes/word2pdf-mass-convert.git](https://github.com/gmrcodes/word2pdf-mass-convert.git)
+git clone https://github.com/gmrcodes/docs2pdf-mass-convert.git
 cd word2pdf-masivo
 
 ```
